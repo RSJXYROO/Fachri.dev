@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fachri | Cybersecurity & AI Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+  background: radial-gradient(circle at top, #0f1b3d, #050814 60%);
+  color:#fff;
+}
+
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0a0f1f;color:#fff;scroll-behavior:smooth}
+
+/* NAVBAR */
+nav{
+  position:fixed;top:0;width:100%;
+  background:rgba(10,15,35,.9);
+  display:flex;justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+  z-index:999
+}
+.logo{font-size:22px;font-weight:700;color:#0ff}
+.logo span{color:#fff}
+nav a{color:#bbb;text-decoration:none;margin-left:25px}
+nav a:hover{color:#0ff}
+
+/* SECTION */
+section{min-height:100vh;padding:120px 10%}
+h1{font-size:42px}
+h1 span{color:#0ff}
+
+/* HERO */
+.hero{display:flex;gap:60px;align-items:center;flex-wrap:wrap}
+.profile{text-align:center}
+.profile img{
+  width:260px;height:260px;
+  border-radius:50%;
+  border:4px solid #0ff;
+  box-shadow:0 0 40px rgba(0,255,255,.6)
+}
+.profile-img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:3px solid #0ff;
+  box-shadow:0 0 18px rgba(0,255,255,.45);
+  object-fit:cover;
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-8px)}
+}
+
+/* ABOUT */
+.about{background:#0f1633}
+.about p{margin-top:25px;color:#ccc;line-height:2}
+
+/* SKILLS */
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(130px,1fr));
+  gap:25px;margin-top:40px
+}
+.skill{
+  background:#121a3a;padding:20px;border-radius:14px;
+  text-align:center;transition:.4s
+}
+.skill:hover{
+  transform:translateY(-12px);
+  box-shadow:0 0 25px rgba(0,255,255,.4)
+}
+.skill img{width:55px;height:55px;margin-bottom:10px}
+
+/* CERT */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;margin-top:40px
+}
+.cert{
+  border-radius:16px;overflow:hidden;
+  cursor:pointer;background:#121a3a
+}
+.cert img{
+  width:100%;height:180px;object-fit:cover;
+  transition:.4s
+}
+.cert:hover img{transform:scale(1.1)}
+
+/* CONTACT */
+.contact{background:#0f1633}
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;margin-top:40px
+}
+.contact-card{
+  background:#121a3a;
+  padding:30px;
+  border-radius:18px;
+  transition:.4s;
+  text-align:center
+}
+.contact-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 30px rgba(0,255,255,.35)
+}
+.contact-card i{
+  font-size:40px;
+  color:#0ff;
+  margin-bottom:15px
+}
+.contact-card h3{margin-bottom:10px}
+.contact-card a{
+  color:#bbb;text-decoration:none;
+  word-break:break-all
+}
+.contact-card a:hover{color:#0ff}
+
+/* MODAL */
+.modal{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.8);
+  justify-content:center;align-items:center
+}
+.modal img{max-width:90%;border-radius:12px}
+
+footer{text-align:center;padding:25px;color:#777}
+/* HERO RESPONSIVE */
+.hero{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.hero-left img{
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  border:4px solid #0ff;
+  box-shadow:0 0 35px rgba(0,255,255,.6);
+}
+
+.hero-right{
+  max-width:600px;
+}
+
+.hero-right p{
+  margin-top:18px;
+  color:#ccc;
+  line-height:1.9;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px){
+  .hero{
+    flex-direction:row;
+    align-items:flex-start;
+  }
+
+  .hero-left img{
+    width:140px;
+    height:140px;
+  }
+
+  .hero-right h1{
+    font-size:26px;
+  }
+
+  .hero-right p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+
+.fade-up{
+  opacity:0;
+  transform:translateY(30px);
+  animation:fadeUp .9s ease forwards;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">Fachri<span>.dev</span></div>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#cert">Certificates</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-left">
+    <img src="profile.jpg" alt="Profile">
+  </div>
+
+  <div class="hero-right">
+    <h1>Cybersecurity & <span>AI Engineer</span></h1>
+    <p>
+      Saya adalah seorang <b>Cybersecurity & AI Engineer</b> yang fokus pada
+      penetration testing, keamanan sistem, dan pengembangan solusi
+      berbasis Artificial Intelligence untuk deteksi dan automasi ancaman.
+    </p>
+    </p>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <h1>About <span>Me</span></h1>
+
+  <p>
+    Saya adalah seorang <b>Cybersecurity & AI Engineer</b> yang memiliki fokus kuat
+    pada perancangan, pengamanan, dan penguatan sistem digital terhadap ancaman
+    siber yang semakin kompleks dan dinamis. Saya terbiasa bekerja dengan pendekatan
+    sistematis dan berbasis analisis risiko untuk memastikan kerahasiaan, integritas,
+    dan ketersediaan informasi (CIA Triad).
+  </p>
+
+  <p>
+    Dalam bidang cybersecurity, saya berpengalaman melakukan <i>penetration testing</i>,
+    <i>vulnerability assessment</i>, dan <i>security hardening</i> pada aplikasi, server,
+    serta infrastruktur jaringan. Saya juga terbiasa menggunakan berbagai security tools
+    seperti Metasploit, Nmap, dan SQLMap untuk mengidentifikasi celah keamanan,
+    menganalisis pola serangan, serta mensimulasikan skenario eksploitasi secara terkontrol.
+  </p>
+
+  <p>
+    Di sisi Artificial Intelligence, saya mengembangkan dan mengintegrasikan solusi AI
+    untuk meningkatkan efektivitas sistem keamanan, seperti <i>anomaly detection</i>,
+    analisis log berbasis machine learning, serta automasi respon terhadap insiden keamanan.
+    Pendekatan ini memungkinkan sistem menjadi lebih adaptif, proaktif, dan mampu
+    merespons ancaman secara real-time.
+  </p>
+
+  <p>
+    I believe that the future of cybersecurity lies in the convergence of human expertise
+    and artificial intelligence. Oleh karena itu, saya berkomitmen untuk terus
+    mengembangkan kemampuan teknis, mengikuti perkembangan teknologi terbaru,
+    serta membangun solusi keamanan yang scalable, resilient, dan future-ready
+    untuk mendukung kebutuhan organisasi modern.
+  </p>
+</section>
+
+
+<section id="skills">
+  <h1>Technical <span>Skills</span></h1>
+  <div class="skills-grid">
+    <div class="skill"><img src="html.png"><p>HTML</p></div>
+    <div class="skill"><img src="css.png"><p>CSS</p></div>
+    <div class="skill"><img src="js.png"><p>JavaScript</p></div>
+    <div class="skill"><img src="python.png"><p>Python</p></div>
+    <div class="skill"><img src="java.png"><p>Java</p></div>
+    <div class="skill"><img src="golang.png"><p>Golang</p></div>
+    <div class="skill"><img src="php.png"><p>PHP</p></div>
+    <div class="skill"><img src="laragon.jpeg"><p>Laragon</p></div>
+    <div class="skill"><img src="metasploit.png"><p>Metasploit</p></div>
+    <div class="skill"><img src="nmap.jpeg"><p>Nmap</p></div>
+
+  </div>
+</section>
+
+<section id="cert" class="about">
+  <h1>My <span>Certificates</span></h1>
+  <div class="cert-grid">
+    <div class="cert" onclick="openModal(this)"><img src="cert1.jpg"></div>
+    <div class="cert" onclick="openModal(this)"><img src="cert2.jpg"></div>
+  </div>
+</section>
+
+<!-- CONTACT PROFESIONAL -->
+<section id="contact" class="contact">
+  <h1>Contact <span>Me</span></h1>
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h3>Email</h3>
+      <a href="mailto:fachrisyaputram@email.com">fachrisyaputram@email.com</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h3>WhatsApp</h3>
+      <a href="https://wa.me/6288286538710" target="_blank">+6288286538710</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-brands fa-github"></i>
+      <h3>GitHub</h3>
+      <a href="https://github.com/RSJXYROO" target="_blank">github.com/RSJXYROO</a>
+    </div>
+
+    <div class="contact-card">
+      <i class="fa-brands fa-instagram"></i>
+      <h3>Instagram</h3>
+      <a href="https://instagram.com/hacked_by.n0v4" target="_blank">@hacked_by.n0v4</a>
+    </div>
+  
+
+
+
+  </div>
+</section>
+
+<footer>© 2026 Fachri — Cybersecurity & AI Engineer</footer>
+
+<div class="modal" id="modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(el){
+  document.getElementById('modal').style.display='flex';
+  document.getElementById('modalImg').src=el.querySelector('img').src;
+}
+</script>
+
+</body>
+</html>
